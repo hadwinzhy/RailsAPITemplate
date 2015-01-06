@@ -2,6 +2,12 @@ Rails.application.routes.draw do
 
   mount API::Base => '/api'
 
+  devise_for :users,  path: 'accounts', controllers: {
+    registrations: "registrations",
+    #omniauth_callbacks: "omniauth_callbacks",
+    sessions: "sessions",
+  }
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
