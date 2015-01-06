@@ -961,7 +961,7 @@
       if (param.paramType === 'path') {
         if (args[param.name]) {
           // apply path params and remove from args
-          var reg = new RegExp('\\{\\s*?' + param.name + '.*?\\}', 'gi');
+          var reg = new RegExp('\\{\\s*?' + param.name + '.*?\\}(?=\\s*?(\\/|$))', 'gi');
           url = url.replace(reg, this.encodePathParam(args[param.name]));
           delete args[param.name];
         }
