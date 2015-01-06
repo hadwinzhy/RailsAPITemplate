@@ -13,3 +13,5 @@ rails server  #use default port 3000
 
 try to visit http://0.0.0.0:3000/api/docs/
 
+#####Use
+1. the api_key now is "fuckthefw", u must add the key at the end of each call
